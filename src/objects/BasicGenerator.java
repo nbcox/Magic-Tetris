@@ -1,4 +1,4 @@
-package hw4;
+package objects;
 
 import api.Generator;
 import api.Position;

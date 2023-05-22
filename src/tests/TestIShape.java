@@ -6,7 +6,7 @@ import java.awt.Color;
 
 import api.Cell;
 import api.Position;
-import hw4.IShape;
+import objects.IShape;
 
 public class TestIShape extends TestShape {
 	public TestIShape(){

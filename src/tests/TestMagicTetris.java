@@ -1,6 +1,6 @@
 package tests;
 
-import hw4.MagicTetris;
+import objects.MagicTetris;
 
 import api.Block;
 import api.Position;

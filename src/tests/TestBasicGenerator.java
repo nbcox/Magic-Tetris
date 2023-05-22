@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import api.Shape;
-import hw4.BasicGenerator;
+import objects.BasicGenerator;
 
 public class TestBasicGenerator {
 	BasicGenerator gen = new BasicGenerator();

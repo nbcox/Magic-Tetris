@@ -11,7 +11,7 @@ import api.Block;
 import api.Cell;
 import api.Position;
 import api.Shape;
-import hw4.SZShape;
+import objects.SZShape;
 
 public class TestSZShape extends TestShape {
 	private Block genericBlockAlt = new Block( Color.RED );

@@ -13,7 +13,7 @@ import api.Block;
 import api.Cell;
 import api.Position;
 import api.Shape;
-import hw4.AbstractShape;
+import objects.AbstractShape;
 
 public abstract class TestShape {
 	protected AbstractShape shape;

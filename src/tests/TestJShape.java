@@ -8,7 +8,7 @@ import org.junit.Before;
 
 import api.Cell;
 import api.Position;
-import hw4.JShape;
+import objects.JShape;
 
 public class TestJShape extends TestShape {
 	public TestJShape(){

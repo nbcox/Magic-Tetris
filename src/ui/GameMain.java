@@ -11,7 +11,7 @@ import javax.swing.SwingUtilities;
 import api.BasicPlayLevel;
 import api.Game;
 import api.PlayLevel;
-import hw4.MagicTetris;
+import objects.MagicTetris;
 
 /**
  * Main class for a GUI for a Tetris game sets up a GamePanel instance in a
@@ -58,7 +58,7 @@ public class GameMain {
 		mainPanel.add(panel);
 
 		// put main panel in a window
-		JFrame frame = new JFrame("Com S 227 Magic Tetris");
+		JFrame frame = new JFrame("Magic Tetris");
 		frame.getContentPane().add(mainPanel);
 
 		// give panels a nonzero size

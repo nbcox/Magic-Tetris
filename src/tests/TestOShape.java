@@ -8,7 +8,7 @@ import org.junit.Before;
 
 import api.Cell;
 import api.Position;
-import hw4.OShape;
+import objects.OShape;
 
 public class TestOShape extends TestShape {
 	public TestOShape(){
