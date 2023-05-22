@@ -6,6 +6,8 @@ import api.Cell;
 import api.Position;
 
 /**
+ * JShape implementation.
+ * 
  * @author Nick Cox
  *
  */
@@ -13,10 +15,8 @@ public class JShape extends AbstractShape {
 	/**
 	 * Constructs a JShape with the given position and magic state.
 	 * 
-	 * @param position
-	 *            - position of this shape's center of rotation
-	 * @param magic
-	 *            - true if the this shape's first cell should be magic
+	 * @param position	position of this shape's center of rotation
+	 * @param magic		true if the this shape's first cell should be magic
 	 */
 	public JShape(Position givenPosition, boolean magic) {
 		this.setPosition(givenPosition);

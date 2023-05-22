@@ -21,10 +21,9 @@ import api.Position;
 
 /**
  * User interface for the main grid of a Tetris-like game.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class GamePanel extends JPanel {
 	/**
@@ -73,10 +72,9 @@ public class GamePanel extends JPanel {
 	/**
 	 * Constructs a GamePanel with the given game and play level.
 	 * 
-	 * @param pGame
-	 *            the IGame instance for which this is the UI
-	 * @param pLevel
-	 *            the IPlayLevel that will determine the animation speed for this UI
+	 * @param pGame		the IGame instance for which this is the UI
+	 * @param pLevel	the IPlayLevel that will determine the animation speed 
+	 * 					for this UI
 	 */
 	public GamePanel(Game pGame, ScorePanel pPanel, PlayLevel pLevel) {
 		scorePanel = pPanel;
@@ -137,15 +135,11 @@ public class GamePanel extends JPanel {
 	/**
 	 * Renders a single cell of the grid.
 	 * 
-	 * @param g
-	 *            the Swing graphics context
-	 * @param row
-	 *            y-coordinate of the cell to render
-	 * @param col
-	 *            x-coordinate of the cell to render
-	 * @param t
-	 *            the IPolyomino associated with the cell, normally used to
-	 *            determine the color with which to render the cell
+	 * @param g		the Swing graphics context
+	 * @param row	y-coordinate of the cell to render
+	 * @param col	x-coordinate of the cell to render
+	 * @param t		the IPolyomino associated with the cell, normally used to
+	 *            	determine the color with which to render the cell
 	 */
 	private void paintOneCell(Graphics g, int row, int col, Block t) {
 		// scale everything up by the SIZE

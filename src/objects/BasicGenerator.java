@@ -17,9 +17,8 @@ public class BasicGenerator implements Generator {
 	/**
 	 * Returns a new Shape instance according to this generator's strategy.
 	 * 
-	 * @param width
-	 *            - the width of the game grid
-	 * @return a new Shape
+	 * @param width	the width of the game grid
+	 * @return 		a new Shape
 	 */
 	@Override
 	public Shape getNext(int width) {

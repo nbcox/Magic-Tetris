@@ -9,10 +9,9 @@ package api;
  * and the cycle() method always uses this ordering. No bounds checking is ever
  * done in implementations of this interface; therefore, the position and the
  * cell positions can have negative coordinates.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public interface Shape extends Cloneable {
 	/**

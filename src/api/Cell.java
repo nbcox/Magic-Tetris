@@ -2,10 +2,9 @@ package api;
 
 /**
  * Container for a block and a position.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class Cell {
 	/**
@@ -32,8 +31,7 @@ public class Cell {
 	/**
 	 * Copy constructor creates a deep copy of the given Cell.
 	 * 
-	 * @param existing
-	 *            the given Cell
+	 * @param existing	the given Cell
 	 */
 	public Cell(Cell existing) {
 		// Blocks are immutable, no need to copy
@@ -62,8 +60,7 @@ public class Cell {
 	/**
 	 * Sets the column for this cell's position.
 	 * 
-	 * @param col
-	 *            the new column
+	 * @param col	the new column
 	 */
 	public void setCol(int col) {
 		position.setCol(col);
@@ -72,8 +69,7 @@ public class Cell {
 	/**
 	 * Sets the row for this cell's position.
 	 * 
-	 * @param row
-	 *            the new row
+	 * @param row	the new row
 	 */
 	public void setRow(int row) {
 		position.setRow(row);
@@ -91,8 +87,7 @@ public class Cell {
 	/**
 	 * Sets the block associated with this Cell.
 	 * 
-	 * @param b
-	 *            the new block
+	 * @param b	the new block
 	 */
 	public void setBlock(Block b) {
 		block = b;

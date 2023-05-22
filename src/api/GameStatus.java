@@ -19,10 +19,9 @@ package api;
  * <dd>A new block group cannot be placed at the top of the grid without
  * colliding with occupied cells
  * </dl>
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public enum GameStatus {
 	NEW_SHAPE, FALLING, STOPPED, COLLAPSING, GAME_OVER

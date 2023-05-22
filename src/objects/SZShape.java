@@ -6,6 +6,8 @@ import api.Cell;
 import api.Position;
 
 /**
+ * SZShape implementation.
+ * 
  * @author Nick Cox
  *
  */
@@ -13,10 +15,8 @@ public class SZShape extends AbstractShape {
 	/**
 	 * Constructs an SZShape with the given position and magic state.
 	 * 
-	 * @param position
-	 *            - position of this shape's upper left block
-	 * @param magic
-	 *            - true if the this shape's first cell should be magic
+	 * @param position	position of this shape's upper left block
+	 * @param magic		true if the this shape's first cell should be magic
 	 */
 	public SZShape(Position givenPosition, boolean magic) {
 		this.setPosition(givenPosition);

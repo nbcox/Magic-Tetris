@@ -3,10 +3,9 @@ package api;
 /**
  * Minimal implementation of PlayLevel interface speeds up the game as the score
  * increases.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class BasicPlayLevel implements PlayLevel {
 	private int[] scores = { 10, 20, 30, 50 };
@@ -32,5 +31,4 @@ public class BasicPlayLevel implements PlayLevel {
 		// score < scores[i]
 		return speeds[i];
 	}
-
 }

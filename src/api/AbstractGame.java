@@ -6,10 +6,9 @@ import java.util.List;
  * A partial implementation of the Game interface for Tetris-like falling block
  * games. Subclasses must implement the determinePositionsToCollapse() and
  * determineScore() methods.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public abstract class AbstractGame implements Game {
 	/**
@@ -261,8 +260,8 @@ public abstract class AbstractGame implements Game {
 	 * down. This method does not update the game state and should normally be
 	 * called only from the step() method.
 	 * 
-	 * @param positionsToCollapse
-	 *            list of positions to collapse, may contain duplicates.
+	 * @param positionsToCollapse	list of positions to collapse, may contain 
+	 * 								duplicates.
 	 */
 	public void collapsePositions(List<Position> positionsToCollapse) {
 		for (int col = 0; col < getWidth(); ++col) {
@@ -277,21 +276,22 @@ public abstract class AbstractGame implements Game {
 	 * @param col
 	 */
 	private void collapseOneColumn(List<Position> positionsToCollapse, int col) {
+		int height = getHeight();
+		boolean[] marked = new boolean[height];
+		int index = height - 1;
+		
 		// flag the positions in this column that need to be collapsed
-		boolean[] marked = new boolean[getHeight()];
 		for (Position p : positionsToCollapse) {
 			if (p.col() == col) {
 				marked[p.row()] = true;
 			}
 		}
-		int index = getHeight() - 1;
-		for (int row = getHeight() - 1; row >= 0; --row) {
+		for (int row = height - 1; row >= 0; row--) {
 			if (!marked[row]) {
-				grid[index][col] = grid[row][col];
-				index -= 1;
+				grid[index--][col] = grid[row][col];
 			}
 		}
-		for (int row = index; row >= 0; --row) {
+		for (int row = index; row >= 0; row--) {
 			grid[row][col] = null;
 		}
 	}
@@ -349,10 +349,9 @@ public abstract class AbstractGame implements Game {
 	 * grid, or extends beyond the sides or bottom of the grid. (A shape in its
 	 * initial position MAY extend above the grid.)
 	 *
-	 * @param t
-	 *            a shape
-	 * @return true if the cells of the given shape extend beyond the sides or
-	 *         bottom of the grid or overlap with any occupied cells of the grid
+	 * @param t	a shape
+	 * @return 	true if the cells of the given shape extend beyond the sides or
+	 *         	bottom of the grid or overlap with any occupied cells of the grid
 	 */
 	private boolean collides(Shape t) {
 		for (Cell c : t.getCells()) {
@@ -369,5 +368,4 @@ public abstract class AbstractGame implements Game {
 		}
 		return false;
 	}
-
 }

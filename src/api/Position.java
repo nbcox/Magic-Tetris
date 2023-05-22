@@ -2,10 +2,9 @@ package api;
 
 /**
  * Data container for a row and column.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class Position {
 	/**
@@ -32,8 +31,7 @@ public class Position {
 	/**
 	 * Constructs a copy of the given Position.
 	 * 
-	 * @param existing
-	 *            a given Position object
+	 * @param existing	a given Position object
 	 */
 	public Position(Position existing) {
 		row = existing.row;
@@ -61,8 +59,7 @@ public class Position {
 	/**
 	 * Sets the row for this position.
 	 * 
-	 * @param newRow
-	 *            new row value
+	 * @param newRow	new row value
 	 */
 	public void setRow(int newRow) {
 		row = newRow;
@@ -71,8 +68,7 @@ public class Position {
 	/**
 	 * Sets the column for this position.
 	 * 
-	 * @param newCol
-	 *            new column value
+	 * @param newCol	new column value
 	 */
 	public void setCol(int newCol) {
 		col = newCol;

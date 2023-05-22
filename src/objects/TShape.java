@@ -6,6 +6,8 @@ import api.Cell;
 import api.Position;
 
 /**
+ * TShape implementation.
+ * 
  * @author Nick Cox
  *
  */
@@ -13,10 +15,8 @@ public class TShape extends AbstractShape {
 	/**
 	 * Constructs a TShape with the given position and magic state.
 	 * 
-	 * @param position
-	 *            - position of this shape's upper left block
-	 * @param magic
-	 *            - true if the this shape's first cell should be magic
+	 * @param position	position of this shape's upper left block
+	 * @param magic		true if the this shape's first cell should be magic
 	 */
 	public TShape(Position givenPosition, boolean magic) {
 		this.setPosition(givenPosition);

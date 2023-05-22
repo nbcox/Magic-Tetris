@@ -11,10 +11,9 @@ import java.util.List;
  * additional part of the game state is the status that is returned by each
  * invocation of the step() method. The status values are described in detail in
  * the GameStatus documentation.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public interface Game {
 	/**
@@ -73,11 +72,9 @@ public interface Game {
 	 * Returns the block associated with the given row and column, or null if the
 	 * location is unoccupied.
 	 * 
-	 * @param row
-	 *            the row of the cell
-	 * @param col
-	 *            the column of the cell
-	 * @return the block associated with the given row/column in the grid
+	 * @param row	the row of the cell
+	 * @param col	the column of the cell
+	 * @return 		the block associated with the given row/column in the grid
 	 */
 	Block getBlock(int row, int col);
 
@@ -86,7 +83,7 @@ public interface Game {
 	 * 
 	 * @return the current shape.
 	 * @throws IllegalStateException
-	 *             if the game status is COLLAPSING or GAME_OVER
+	 *         if the game status is COLLAPSING or GAME_OVER
 	 */
 	Shape getCurrent();
 
@@ -113,7 +110,7 @@ public interface Game {
 	 * @return list of Position objects representing the the grid positions to be
 	 *         collapsed
 	 * @throws IllegalStateException
-	 *             if the game status is not COLLAPSING
+	 *         if the game status is not COLLAPSING
 	 */
 	List<Position> getPositionsToCollapse();
 

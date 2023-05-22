@@ -16,10 +16,9 @@ import objects.MagicTetris;
 /**
  * Main class for a GUI for a Tetris game sets up a GamePanel instance in a
  * frame.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class GameMain {
 	/**
@@ -75,7 +74,7 @@ public class GameMain {
 		// be sure key events get to the panel
 		panel.requestFocus();
 
-		// rock and roll...
+		// show the frame
 		frame.setVisible(true);
 	}
 
@@ -83,8 +82,7 @@ public class GameMain {
 	 * Entry point. Main thread passed control immediately to the Swing event
 	 * thread.
 	 * 
-	 * @param args
-	 *            not used
+	 * @param args	not used
 	 */
 	public static void main(String[] args) {
 		Runnable r = new Runnable() {

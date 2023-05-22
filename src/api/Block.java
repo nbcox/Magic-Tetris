@@ -4,10 +4,9 @@ import java.awt.Color;
 
 /**
  * Interface specifying an icon or block in a Tetris-like game.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class Block {
 	/**
@@ -23,8 +22,7 @@ public class Block {
 	/**
 	 * Constructs a Block with the given color that is not magic.
 	 * 
-	 * @param c
-	 *            color to be associated with this block
+	 * @param c	color to be associated with this block
 	 */
 	public Block(Color c) {
 		this.color = c;
@@ -34,25 +32,13 @@ public class Block {
 	/**
 	 * Constructs a Block with the given color and magic state.
 	 * 
-	 * @param c
-	 *            color to be associated with this block
-	 * @param magic
-	 *            true if this block should be in the magic state, false otherwise
+	 * @param c		color to be associated with this block
+	 * @param magic	true if this block should be in the magic state, false otherwise
 	 */
 	public Block(Color c, boolean magic) {
 		this.color = c;
 		this.magic = magic;
 	}
-
-	// /**
-	// * Copy constructor.
-	// * @param existingBlock
-	// */
-	// public Block(Block existingBlock)
-	// {
-	// this.color = existingBlock.color;
-	// this.magic = existingBlock.magic;
-	// }
 
 	/**
 	 * Returns the color associated with this block.
@@ -67,9 +53,8 @@ public class Block {
 	 * Determines whether this block has the same color and magic state as the given
 	 * block.
 	 * 
-	 * @param block
-	 *            given block
-	 * @return true if this block matches the given block
+	 * @param block	given block
+	 * @return 		true if this block matches the given block
 	 */
 	public boolean matches(Block block) {
 		return (block != null && block.getColorHint() == this.color);

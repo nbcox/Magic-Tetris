@@ -11,10 +11,9 @@ import javax.swing.JPanel;
 
 /**
  * Panel for displaying the score in a simple video game.
- */
-/**
+ * 
  * @author Nick Cox
- *
+ * 
  */
 public class ScorePanel extends JPanel {
 	/**
@@ -30,8 +29,7 @@ public class ScorePanel extends JPanel {
 	/**
 	 * Sets the score to be displayed in this panel.
 	 * 
-	 * @param newScore
-	 *            score to be displayed
+	 * @param newScore	score to be displayed
 	 */
 	public void updateScore(int newScore) {
 		this.score = newScore;
