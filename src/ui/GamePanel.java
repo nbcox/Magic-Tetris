@@ -193,7 +193,7 @@ public class GamePanel extends JPanel {
 				// if we were in the collapsing state, we're done
 				blocksToCollapse = null;
 
-				// TODO only do this if we were animating
+				// only do this if we were animating
 				int speed = level.speed(game.getScore());
 				timer.setDelay(speed);
 				timer.setInitialDelay(speed);

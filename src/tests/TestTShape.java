@@ -145,7 +145,9 @@ public class TestTShape extends TestShape {
 
 	@Override
 	protected void assertEqualsOriginal(Cell[] cells) {
-		// TODO Auto-generated method stub
-		
+		assertEquals( "Cell 0", new Cell( genericBlock, new Position(-1,0) ), cells[0] );
+		assertEquals( "Cell 1", new Cell( genericBlock, new Position(0,-1) ), cells[1] );
+		assertEquals( "Cell 2", new Cell( genericBlock, new Position(0,0) ), cells[2] );
+		assertEquals( "Cell 3", new Cell( genericBlock, new Position(0,1) ), cells[3] );
 	}
 }
