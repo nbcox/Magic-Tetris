@@ -2,7 +2,11 @@ package ui;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.io.File;
 
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -35,6 +39,12 @@ public class GameMain {
 	 * Grid background color.
 	 */
 	public static final Color BACKGROUND_COLOR = Color.LIGHT_GRAY;
+	
+	/**
+	 * Media player for playing background music.
+	 */
+	private static MediaPlayer backgroundMusicPlayer;
+
 
 	/**
 	 * Helper method for instantiating the components. This method should be
@@ -76,6 +86,26 @@ public class GameMain {
 
 		// show the frame
 		frame.setVisible(true);
+		
+		// Initialize the JavaFX toolkit
+		new JFXPanel();
+		
+		try {
+		    // Load the music file
+		    String musicFile = "resources/background_music.mp3"; // Update the file path accordingly
+		    Media music = new Media(new File(musicFile).toURI().toString());
+
+		    // Create a MediaPlayer instance to play the music
+		    backgroundMusicPlayer = new MediaPlayer(music);
+
+		    // Set the music to loop indefinitely
+		    backgroundMusicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+		    // Start playing the music
+		    backgroundMusicPlayer.play();
+		} catch (Exception e) {
+		    e.printStackTrace();
+		}
 	}
 
 	/**
@@ -91,5 +121,12 @@ public class GameMain {
 			}
 		};
 		SwingUtilities.invokeLater(r);
+		
+		// Add a shutdown hook to stop the background music
+	    Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+	        if (backgroundMusicPlayer != null) {
+	            backgroundMusicPlayer.stop();
+	        }
+	    }));
 	}
 }
