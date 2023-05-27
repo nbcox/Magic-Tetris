@@ -217,6 +217,8 @@ public class GamePanel extends JPanel {
 			}
 			// else state is FALLING, nothing to do but repaint
 		}
+		// Update the high score in the score panel
+	    scorePanel.updateHighScore(game.getScore());
 	}
 
 	private void normalSpeed() {

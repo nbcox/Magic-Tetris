@@ -45,7 +45,6 @@ public class GameMain {
 	 */
 	private static MediaPlayer backgroundMusicPlayer;
 
-
 	/**
 	 * Helper method for instantiating the components. This method should be
 	 * executed in the context of the Swing event thread only.
@@ -83,29 +82,32 @@ public class GameMain {
 
 		// be sure key events get to the panel
 		panel.requestFocus();
-
-		// show the frame
-		frame.setVisible(true);
 		
 		// Initialize the JavaFX toolkit
 		new JFXPanel();
-		
+				
 		try {
-		    // Load the music file
-		    String musicFile = "resources/background_music.mp3"; // Update the file path accordingly
-		    Media music = new Media(new File(musicFile).toURI().toString());
+			// Load the music file
+			String musicFile = "resources/background_music.mp3"; // Update the file path accordingly
+			Media music = new Media(new File(musicFile).toURI().toString());
 
-		    // Create a MediaPlayer instance to play the music
-		    backgroundMusicPlayer = new MediaPlayer(music);
+			// Create a MediaPlayer instance to play the music
+			backgroundMusicPlayer = new MediaPlayer(music);
 
-		    // Set the music to loop indefinitely
-		    backgroundMusicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+			// Set the music to loop indefinitely
+			backgroundMusicPlayer.setCycleCount(MediaPlayer.INDEFINITE);
 
-		    // Start playing the music
-		    backgroundMusicPlayer.play();
+			// Start playing the music
+			backgroundMusicPlayer.play();
 		} catch (Exception e) {
-		    e.printStackTrace();
+			e.printStackTrace();
 		}
+		
+		// load existing high score
+		scorePanel.loadHighScoreFromFile();
+		
+		// show the frame
+		frame.setVisible(true);
 	}
 
 	/**
